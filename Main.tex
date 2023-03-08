@@ -1,0 +1,55 @@
+Sure, here's the detailed process for finding the Fourier series of `f(x) = x^2` on the interval `-π<x<π`, written in advanced Math Markdown format:
+
+We start by using the general formula for the Fourier series of a periodic function `f(x)` with period `2L`:
+
+$$
+f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} [a_n \cos(\frac{n\pi x}{L}) + b_n \sin(\frac{n\pi x}{L})]
+$$
+
+where `a_0`, `a_n`, and `b_n` are the Fourier coefficients, which can be calculated as follows:
+
+$$
+a_0 = \frac{1}{L} \int_{-L}^{L} f(x) dx
+$$
+
+$$
+a_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos(\frac{n\pi x}{L}) dx
+$$
+
+$$
+b_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin(\frac{n\pi x}{L}) dx
+$$
+
+For our function `f(x) = x^2` on the interval `-π<x<π`, we have `L = π`. Therefore, the Fourier coefficients become:
+
+$$
+a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 dx
+$$
+
+$$
+a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(nx) dx
+$$
+
+$$
+b_n = 0
+$$
+
+To find `a_0`, we integrate `x^2` from `-π` to `π`:
+
+$$
+a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 dx = \frac{\pi^2}{3}
+$$
+
+To find `a_n`, we integrate `x^2 cos(nx)` from `-π` to `π`:
+
+$$
+a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(nx) dx = \frac{4(-1)^n}{n^2\pi}
+$$
+
+Therefore, the Fourier series for `f(x) = x^2` on the interval `-π<x<π` is given by:
+
+$$
+f(x) = \frac{\pi^2}{3} + \frac{4}{\pi} \sum_{n=1}^{\infty} \frac{(-1)^n}{n^2} \cos(nx)
+$$
+
+This series converges pointwise to `f(x) = x^2` for all `x` in the interval `-π<x<π`.
